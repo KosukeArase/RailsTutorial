@@ -10,6 +10,7 @@
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %> <!-- dev に含めないと container が適用されず汚い，もちろん footer のクラスに container 指定しても良い -->
+      <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
 </html>
